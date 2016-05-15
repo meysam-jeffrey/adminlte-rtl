@@ -9,7 +9,7 @@
 .left-side {
   position: absolute;
   top: 0;
-  left: 0;
+  @{left}: 0;
   padding-top: 50px;
   min-height: 100%;
   width: @sidebar-width;
@@ -21,12 +21,24 @@
   @media (max-width: @screen-header-collapse) {
     padding-top: 100px;
   }
+  &when(@left=left){
   @media (max-width: @screen-xs-max) {
-    .translate(-@sidebar-width, 0);
-  }
-  .sidebar-collapse & {
-    @media (min-width: @screen-sm) {
       .translate(-@sidebar-width, 0);
+    }
+    .sidebar-collapse & {
+      @media (min-width: @screen-sm) {
+        .translate(-@sidebar-width, 0);
+      }
+    }
+  }
+  &when(@left=right){
+  @media (max-width: @screen-xs-max) {
+      .translate(@sidebar-width, 0);
+    }
+    .sidebar-collapse & {
+      @media (min-width: @screen-sm) {
+        .translate(@sidebar-width, 0);
+      }
     }
   }
   .sidebar-open & {
@@ -63,14 +75,14 @@
     padding: 5px 5px 5px 15px;
     line-height: 1;
     position: absolute;
-    left: 55px;
+    @{left}: 55px;
     > p {
       font-weight: 600;
       margin-bottom: 9px;
     }
     > a {
       text-decoration: none;
-      padding-right: 5px;
+      padding-@{right}: 5px;
       margin-top: 3px;
       font-size: 11px;
       > .fa,
@@ -98,7 +110,8 @@
       > .fa,
       > .glyphicon,
       > .ion {
-        width: 20px;
+        width: 35px;
+        text-align:center;
       }
     }
     .label,
@@ -115,7 +128,7 @@
     width: auto;
     height: auto;
     padding: 0;
-    margin-right: 10px;
+    margin-@{right}: 10px;
     margin-top: 3px;
   }
   li.active {
@@ -133,9 +146,9 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    padding-left: 5px;
+    padding-@{left}: 5px;
     .treeview-menu {
-      padding-left: 20px;
+      padding-@{left}: 20px;
     }
     > li {
       margin: 0;

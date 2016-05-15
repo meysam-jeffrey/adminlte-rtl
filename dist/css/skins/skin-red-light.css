@@ -79,7 +79,7 @@
   background: #f9fafc;
 }
 .skin-red-light .sidebar-menu > li > a {
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   font-weight: 600;
 }
 .skin-red-light .sidebar-menu > li:hover > a,
@@ -88,7 +88,7 @@
   background: #f4f4f5;
 }
 .skin-red-light .sidebar-menu > li.active {
-  border-left-color: #dd4b39;
+  border-right-color: #dd4b39;
 }
 .skin-red-light .sidebar-menu > li.active > a {
   font-weight: 600;
@@ -140,7 +140,7 @@
   color: #666;
 }
 .skin-red-light .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
-  border-left-color: #fff;
+  border-right-color: #fff;
 }
 .skin-red-light .sidebar-form .btn {
   color: #999;

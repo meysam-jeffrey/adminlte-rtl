@@ -2,6 +2,15 @@
  * Core: General Layout Style
  * -------------------------
  */
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/Vazir.eot');
+  src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Vazir.woff') format('woff'),
+       url('../fonts/Vazir.ttf') format('truetype');
+  font-weight: normal;
+}
+
 html,
 body {
   min-height: 100%;
@@ -13,7 +22,7 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Vazir','Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -49,25 +58,30 @@ body {
   @transition-rule: @transition-speed @transition-fn,
   margin @transition-speed @transition-fn;
   .transition-transform(@transition-rule);
-  margin-left: @sidebar-width;
+  margin-@{left}: @sidebar-width;
   z-index: 820;
   //Top nav layout
   .layout-top-nav & {
-    margin-left: 0;
+    margin-@{left}: 0;
   }
   @media (max-width: @screen-xs-max) {
-    margin-left: 0;
+    margin-@{left}: 0;
   }
   //When opening the sidebar on large screens
   .sidebar-collapse & {
     @media (min-width: @screen-sm) {
-      margin-left: 0;
+      margin-@{left}: 0;
     }
   }
   //When opening the sidebar on small screens
   .sidebar-open & {
     @media (max-width: @screen-xs-max) {
-      .translate(@sidebar-width, 0);
+      &when(@left=left){
+        .translate(@sidebar-width, 0);
+      }
+      &when(@left=right){
+        .translate(-@sidebar-width, 0);
+      }      
     }
   }
 }
@@ -145,7 +159,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Vazir','Source Sans Pro', sans-serif;
 }
 
 /* General Links */

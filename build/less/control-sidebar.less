@@ -13,9 +13,14 @@
 .control-sidebar-bg,
 .control-sidebar {
   top: 0;
-  right: -@control-sidebar-width;
+  @{right}: -@control-sidebar-width;
   width: @control-sidebar-width;
-  .transition(right @transition-speed ease-in-out);
+  &when(left=left){
+    .transition(left @transition-speed ease-in-out);
+  }
+  &when(left=right){
+    .transition(right @transition-speed ease-in-out);
+  }  
 }
 
 //The sidebar
@@ -35,7 +40,7 @@
   &.control-sidebar-open {
     &,
     + .control-sidebar-bg {
-      right: 0;
+      @{right}: 0;
     }
   }
 }
@@ -44,13 +49,13 @@
 .control-sidebar-open {
   .control-sidebar-bg,
   .control-sidebar {
-    right: 0;
+    @{right}: 0;
   }
   @media (min-width: @screen-sm) {
     .content-wrapper,
     .right-side,
     .main-footer {
-      margin-right: @control-sidebar-width;
+      margin-@{right}: @control-sidebar-width;
     }
   }
 }

@@ -63,7 +63,7 @@
     color: @color;
     &:after,
     &:before {
-      border-left-color: @bg-color;
+      border-@{left}-color: @bg-color;
     }
   }
 }
@@ -124,6 +124,9 @@
   }
   //User Panel (resides in the sidebar)
   .user-panel {
+    > .image {
+      float:@left !important;
+    }
     > .info, > .info > a {
       color: #fff;
     }
@@ -137,17 +140,22 @@
     }
     //links
     > a {
-      border-left: 3px solid transparent;
+      border-@{left}: 3px solid transparent;
     }
     //Hover and active states
     &:hover > a, &.active > a {
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
-      border-left-color: @link-hover-border-color;
+      border-@{left}-color: @link-hover-border-color;
     }
     //First Level Submenu
     > .treeview-menu {
-      margin: 0 1px;
+      &when(@left=left) {
+        margin: 0 1px;
+      }
+      &when(@left=right) {
+        margin: 0 0 1px;
+      }      
       background: @sidebar-dark-submenu-bg;
     }
   }
@@ -189,7 +197,7 @@
         color: #666;
       }
       &:focus + .input-group-btn .btn {
-        border-left-color: #fff;
+        border-@{left}-color: #fff;
       }
     }
     .btn {
@@ -228,7 +236,7 @@
     }
     //links
     > a {
-      border-left: 3px solid transparent;
+      border-@{left}: 3px solid transparent;
       font-weight: 600;
     }
     //Hover and active states
@@ -241,7 +249,7 @@
 
     }
     &.active {
-      border-left-color: @icon-active-color;
+      border-@{left}-color: @icon-active-color;
       > a {
         font-weight: 600;
       }
@@ -295,7 +303,7 @@
         color: #666;
       }
       &:focus + .input-group-btn .btn {
-        border-left-color: #fff;
+        border-@{left}-color: #fff;
       }
     }
     .btn {
@@ -306,7 +314,7 @@
   @media (min-width: @screen-sm-min) {
     &.sidebar-mini.sidebar-collapse {
       .sidebar-menu > li > .treeview-menu {
-        border-left: 1px solid @gray;
+        border-@{right}: 1px solid @gray;
       }
     }
   }

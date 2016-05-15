@@ -79,7 +79,7 @@
   background: #f9fafc;
 }
 .skin-purple-light .sidebar-menu > li > a {
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   font-weight: 600;
 }
 .skin-purple-light .sidebar-menu > li:hover > a,
@@ -88,7 +88,7 @@
   background: #f4f4f5;
 }
 .skin-purple-light .sidebar-menu > li.active {
-  border-left-color: #605ca8;
+  border-right-color: #605ca8;
 }
 .skin-purple-light .sidebar-menu > li.active > a {
   font-weight: 600;
@@ -140,7 +140,7 @@
   color: #666;
 }
 .skin-purple-light .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
-  border-left-color: #fff;
+  border-right-color: #fff;
 }
 .skin-purple-light .sidebar-form .btn {
   color: #999;

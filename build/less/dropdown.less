@@ -335,13 +335,13 @@
 
 @media (max-width: @screen-sm-max) {
   .navbar-custom-menu > .navbar-nav {
-    float: right;
+    float: @right;
     > li {
       position: static;
       > .dropdown-menu {
         position: absolute;
-        right: 5%;
-        left: auto;
+        @{right}: 5%;
+        @{left}: auto;
         border: 1px solid #ddd;
         background: #fff;
       }

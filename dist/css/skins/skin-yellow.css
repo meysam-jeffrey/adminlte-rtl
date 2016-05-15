@@ -61,6 +61,9 @@
 .skin-yellow .left-side {
   background-color: #222d32;
 }
+.skin-yellow .user-panel > .image {
+  float: right !important;
+}
 .skin-yellow .user-panel > .info,
 .skin-yellow .user-panel > .info > a {
   color: #fff;
@@ -70,16 +73,16 @@
   background: #1a2226;
 }
 .skin-yellow .sidebar-menu > li > a {
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
 }
 .skin-yellow .sidebar-menu > li:hover > a,
 .skin-yellow .sidebar-menu > li.active > a {
   color: #ffffff;
   background: #1e282c;
-  border-left-color: #f39c12;
+  border-right-color: #f39c12;
 }
 .skin-yellow .sidebar-menu > li > .treeview-menu {
-  margin: 0 1px;
+  margin: 0 0 1px;
   background: #2c3b41;
 }
 .skin-yellow .sidebar a {
@@ -123,7 +126,7 @@
   color: #666;
 }
 .skin-yellow .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
-  border-left-color: #fff;
+  border-right-color: #fff;
 }
 .skin-yellow .sidebar-form .btn {
   color: #999;
