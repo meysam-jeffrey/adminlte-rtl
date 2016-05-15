@@ -26,7 +26,7 @@ $ grunt dist
 @tag-align: left;
 @left:      left;
 @right:     right;
-
+```
 #Assets
 ---
 [http://rastikerdar.github.io/vazir-font](http://rastikerdar.github.io/vazir-font)
