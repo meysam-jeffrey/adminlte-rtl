@@ -12,6 +12,7 @@ $ npm install -g grunt-cli
 Compile files:
 ```bash
 $ grunt dist
+```
 
 ####AdminLTE RTL(build/less/variable.less):
 ---
@@ -29,8 +30,8 @@ $ grunt dist
 ```
 #Assets
 ---
-[http://rastikerdar.github.io/vazir-font](http://rastikerdar.github.io/vazir-font)
-[http://j4f4rii.github.io/bootstrap-rtl](http://j4f4rii.github.io/bootstrap-rtl)
++[http://rastikerdar.github.io/vazir-font](http://rastikerdar.github.io/vazir-font)
++[http://j4f4rii.github.io/bootstrap-rtl](http://j4f4rii.github.io/bootstrap-rtl)
 
 
 
