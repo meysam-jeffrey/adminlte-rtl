@@ -29,7 +29,10 @@ $ grunt dist
 @left:      left;
 @right:     right;
 ```
-#Assets
+## Demo
++ [http://j4f4rii.github.io/adminlte-rtl](http://j4f4rii.github.io/adminlte-rtl)
+
+####Assets
 ---
 [http://j4f4rii.github.io/bootstrap-rtl](http://j4f4rii.github.io/bootstrap-rtl)
 
